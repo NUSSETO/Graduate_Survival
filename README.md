@@ -27,3 +27,7 @@ This is a static web application (HTML/CSS/JS).
 - Vanilla JavaScript (ES6+)
 
 No dependencies required!
+
+## Credits
+This project was made solely with Antigravity.
+Commanded by Jason Huang.
