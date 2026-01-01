@@ -1,0 +1,224 @@
+:root {
+  --wood-color: #8b5a2b;
+  --wood-grain: #5c3a1e;
+  --paper-white: #fdfbf7;
+  --ink-blue: #000080;
+  --coffee-stain: rgba(101, 67, 33, 0.4);
+}
+
+body {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: var(--wood-color);
+  background-image: repeating-linear-gradient(45deg,
+      var(--wood-color) 25%,
+      var(--wood-color) 25%,
+      var(--wood-grain) 27%,
+      var(--wood-color) 27%,
+      var(--wood-color) 50%);
+  background-size: 20px 20px;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+#desk {
+  width: 90%;
+  height: 90%;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: transform 0.1s;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.item {
+  position: absolute;
+  padding: 10px;
+}
+
+/* Coffee Styling Removed */
+
+/* Paper Styling */
+#paper-spot {
+  bottom: 20%;
+  left: 30%;
+  transform: rotate(3deg);
+}
+
+#paper-btn {
+  width: 140px;
+  height: 180px;
+  background-color: var(--paper-white);
+  box-shadow: 1px 1px 0 #ccc, 2px 2px 0 #ccc, 3px 3px 0 #ccc, 5px 5px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.stat-tag {
+  background: #fffdc0;
+  padding: 5px 10px;
+  margin-top: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transform: rotate(-2deg);
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Shop / Clipboard Styling */
+#shop-clipboard {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  /* Moved to right */
+  width: 250px;
+  height: 70%;
+  background: #f4ecce;
+  /* Manila folder color */
+  border-top: 10px solid #555;
+  /* Clip part */
+  padding: 20px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+  transform: rotate(1deg);
+  overflow-y: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.clip-header {
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.shop-item {
+  border-bottom: 1px dashed #999;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.shop-item button {
+  font-size: 0.9rem;
+  background: #e0e0e0;
+  border: 1px solid #999;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.shop-item button:hover:not(:disabled) {
+  background: #d0d0d0;
+}
+
+/* Decorations Removed */
+
+/* Random Event Post-it */
+#post-its {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  /* Center-ish */
+  transform: translateX(-50%);
+  z-index: 20;
+  /* Ensure on top */
+}
+
+.post-it {
+  width: 150px;
+  height: 150px;
+  background-color: #ff7eb9;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: rotate(10deg);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Report Card Styling */
+#report-card {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  /* Top Left corner */
+  background: white;
+  padding: 15px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transform: rotate(-2deg);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  width: 180px;
+}
+
+.card-title {
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Decoration */
+.polaroid {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  /* Moved to Bottom Left */
+  transform: rotate(5deg);
+  background: white;
+  padding: 10px 10px 30px 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.photo {
+  background: #333;
+  width: 80px;
+  height: 80px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+}
+
+.caption {
+  text-align: center;
+  margin-top: 10px;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 1rem;
+}

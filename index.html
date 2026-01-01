@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Graduate Student Survival</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="desk">
+    <div id="overlay-message" class="hidden"></div>
+
+    <div class="item" id="paper-spot">
+      <button id="paper-btn" aria-label="Write Paper" disabled>
+        📝 Write Paper
+        <br><small>(Cost: 2 Energy)</small>
+      </button>
+      <div class="stat-tag">Papers: <span id="paper-count">0</span></div>
+    </div>
+
+    <!-- Upgrades / Shop -->
+    <div id="shop-clipboard">
+      <div class="clip-header">TASK LIST (SHOP)</div>
+      <div id="shop-list">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+
+    <!-- Report Card stats -->
+    <div id="report-card">
+      <div class="card-title">SEMESTER REPORT</div>
+      <div>Energy: <span id="energy-display-main">10</span></div>
+      <div>Regen/Sec: <span id="stat-energy-sec">--</span></div>
+      <div>Papers/Sec: <span id="stat-paper-sec">--</span></div>
+    </div>
+
+    <div id="post-its">
+      <div class="post-it warning hidden" id="event-note">
+        <p id="event-text">Advisor Meeting!</p>
+      </div>
+    </div>
+
+    <div class="polaroid" id="goal-polaroid">
+      <div class="photo">🎓</div>
+      <div class="caption">
+        <div>Degree Audit</div>
+        <small id="goal-progress">0 / 1000 Papers</small>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>
